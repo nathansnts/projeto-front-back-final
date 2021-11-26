@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Meu primeiro site</title>
+    <link rel="icon" href="img/logotipo1.png">
+    <link href="" rel="stylesheet" />
+</head>
+<style>
+    a {
+        text-decoration: none;
+    }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #112831;
+    }
+    
+    .icone img {
+        max-width: 100px;
+        max-height: 100px;
+        width: auto;
+        height: auto;   
+    }
+    #corpo {
+        text-align: center;
+        position: absolute;
+        padding: 5%;
+        font-size: 15px;
+        margin-top: 5%;
+        margin-left: 38%;
+        border-radius: 15px;
+        border: 1px solid black;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        background-image: linear-gradient(to right, #15ba78, #0e8363);
+    }
+
+    input{
+        padding: 15px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        width: 210px;
+        
+        
+
+    }
+    button {
+        color: black;
+        padding: 10px;
+        width: 170px;
+        border-radius: 15px;
+        cursor: pointer;
+        border: none;
+    }
+    .links{
+        text-align: left;
+        color: blue;
+    }
+
+    .cadastrausu{
+        color: #ffffff;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    p {
+        color: #000000;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+</style>
+<body>
+ 
+    <div id="corpo">
+        <div class="icone"><img src="https://image.flaticon.com/icons/png/128/3062/3062987.png" alt="" /></div>
+
+        <form action="/sessao" method="post">
+            <h1>Vendas Online</h1>
+            <input type="text" name="email" placeholder="Email"required /> <br /><br />
+            <label for="nome"></label>
+            <input type="password" name="senha" placeholder="Senha" required/>
+            <label for="senha"></label>
+            <br /><br />
+            <button >Entrar</button><br /><br />
+            <p>NÃO POSSUI CADASTRO?<a class="cadastrausu"href="http://localhost:8080/cadastrousuario"><u><br>CADASTRE-SE AQUI<br></u></a></p>
+        </form>
+    </div>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <% if(typeof alert !== 'undefined') { %>
+        <script>
+           Swal.fire({
+                title: '<%=title %>',
+                text: '<%=text %>',
+                icon: '<%=icon %>',
+                showConfirmButton: <%=showConfirmButton %>,
+                timer: <%= timer %>,
+            }).then(() => {
+                window.location='<%=route %>'
+            })
+        </script>
+    <% } %> 
+</body>
+</html> 

@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(https://eskipaper.com/images/free-background-4.jpg);
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    background-image: linear-gradient(to right, #15ba78, #0e8363);
+    height: 80px;
+    border: solid 1px;
+    padding: 5px;
+}
+
+    nav a:hover {
+        background-color: white;
+    }
+
+#barra {
+    list-style: none;
+    display: flex;
+}
+
+    #barra li {
+        letter-spacing: 3px;
+        margin-left: 32px;
+        justify-content: center;
+    }
+
+a:hover {
+    opacity: 0.5;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.logo {
+    display: flex;
+    margin-top: 20px;
+}
+
+#container {
+    min-width: 1000px;
+    margin-top: 45px;
+}
+.conteiner_dos_contatos {
+    display: flex;
+    justify-content: center;
+}    
+.contatos{
+    width: 500px;
+    height: auto;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: justify;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+.contatos img {
+    width: 200px;
+    height: 200px;
+}
+
